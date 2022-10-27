@@ -1,0 +1,129 @@
+$p : 20px;
+$m : 20px;
+$bor_rad : 10px;
+$fontSize : 14px;
+$orange : #f59e0b;
+$red : #f44336;
+$blue : #0075ff;
+$bluesec : #0d69d5;
+$green  : #22c55e;
+$gray : #888;
+$back_div : #eeeded;
+// ====================================
+// @media (max-width:1300px)
+// ====================================
+
+body 
+{
+    font-family: lato, sans-serif;
+    margin: 0px;
+}
+* 
+{
+    box-sizing: border-box;
+    &:focus
+    {
+        outline: none;
+    }
+}
+a 
+{
+    text-decoration: none;
+}
+ul 
+{
+    padding: 0px;
+    list-style: none;
+}
+
+*:focus
+{
+outline-color: #aaa;
+}
+img 
+{
+    cursor: pointer;
+}
+@mixin trans {
+    transition: all .4s ease-in-out;
+}
+.welcome_butt,.quick_butt
+{
+width: fit-content;
+border: none;
+text-transform: capitalize;
+margin: $m;
+text-align: right; 
+position: absolute;
+bottom: 0px;
+right: 0px;
+cursor: pointer;
+@include trans;
+&:hover 
+{
+background-color: $blue;
+}
+background-color: $bluesec;
+color: #fff;
+border-radius: $bor_rad;
+padding: 10px;
+font-size: $fontSize  !important;
+}
+.target_content,.Tickets_content,.lastest_news_content,.lastest_tracks_content,.top_reach_content,.lastest_uploads_content
+,.lastProject_content,.content,.contentProject
+{
+     h2 
+    {
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+  p 
+  {
+color: $gray;
+margin-top: 5px;
+font-size: $fontSize + 1px;
+  }
+}
+.content 
+{
+    margin-bottom: 20px;
+}
+h2 
+{
+    font-size:1.4em;
+}
+p 
+{
+    font-weight: 500;
+    color: $gray;
+}
+
+@mixin fixed_div {
+    padding: $p;
+    text-transform: capitalize;
+background-color: #fff;
+ position: relative;
+border-radius: $bor_rad;
+}
+.reminders,.lastest_post,.scocial_media,.Projectss
+{
+     @include fixed_div;
+}
+// ========================================================
+@media (max-width : 767px)
+{
+.target_content,.Tickets_content,.lastest_news_content,.lastest_tracks_content,.top_reach_content,.lastest_uploads_content
+    ,.lastProject_content,.content,.contentProfile,.contentProject
+    {
+        width: 100%;
+        h2 , p 
+    {
+        text-align: center;
+    }
+    p 
+    {
+        margin-bottom: 30px !important;
+    }
+    }
+}
+// ========================================================

@@ -1,0 +1,174 @@
+@import "./mixins";
+//========================================================================================
+.page 
+{
+    .content
+    {
+        .plans_all
+        {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-rows: repeat(auto-fill, minmax(1fr));
+            margin-left: 20px;
+            gap: 20px;
+            .plan
+            {
+                background-color: #fff;
+                text-transform: capitalize;
+                position: relative;
+                padding: 15px;
+                .plan_head
+                {
+                    height: 120px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    outline: 2px solid $green;
+                    border: 2px solid #fff;
+                    width: 100%;
+                    background-color: $green;
+                    text-align: center;
+                    padding-top: 10px;
+                    p 
+                    {
+                        color: #fff;
+                        margin-top: 10px;
+                    }
+                    p:first-child
+                    {
+                        font-size:1.4em;
+                        margin-bottom: 4px;
+                    }
+                    p:last-child 
+                    {
+                        margin-top: 0px;
+                        sup
+                        {
+                            font-size: .6em;
+                        }
+                        font-size:2.3em;
+                    }
+                }
+                .plan_body
+                {
+                    margin-top: 40px;
+                    > div 
+                    {
+                        margin-bottom: 15px;
+                        padding-bottom: 15px;
+                        border-bottom: 1px solid #ddd;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        span 
+                        {
+                            font-size: .8em;
+                            i 
+                            {
+                                color: $green;
+                            }
+                            .fa-xmark
+                            {
+                                color: $red;
+                            }
+                        }
+                        .fa-info
+                        {
+                            color: #ffffff;
+                            background-color: rgb(87, 87, 87);
+                            border-radius: 50%;
+                           width: 18px;
+                           font-size: .6em;
+                           height: 18px;
+                           display: flex;
+                           place-content: center;
+                           place-items: center;
+                        }
+                     
+                    }
+                }
+                .plan_foot
+                {
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+ span
+                {
+                    padding: 10px 13px;
+                    border-radius:$bor_rad ;
+                    color:#fff;
+                    background-color: $green;
+                }
+                }
+               
+            }
+            .plan:nth-of-type(2)
+            {
+                .plan_head
+                {
+                    outline: 2px solid $bluesec;
+                    background-color: $bluesec;
+                }
+                .plan_foot
+                {
+ span
+                {
+                    background-color: $bluesec;
+                }
+                }
+            }
+            .plan:nth-of-type(3)
+            {
+                .plan_head
+                {
+                    outline: 2px solid $orange;
+                    background-color: $orange;
+                }
+                .plan_foot
+                {
+ span
+                {
+                    background-color: $orange;
+                }
+                }
+            }
+            }
+        }
+    }
+                //========================================================================================
+@media (max-width:992px)
+{
+    .page 
+{
+    .content
+    {
+    .plans_all
+{
+    grid-template-columns: repeat(1 minmax(200px, 1fr));
+    grid-template-rows: repeat(1, minmax(300px, 1fr));
+    }
+}
+}
+}
+@media (max-width:767px)
+{
+    .page 
+{
+    .content
+    {
+    .plans_all
+{
+    .plan
+    {
+        .plan_head
+        {
+            p:last-child 
+            {
+                margin-top: -25px;
+            }
+        }
+}
+    }
+}
+}
+}
+//========================================================================================
+@import "./Media";

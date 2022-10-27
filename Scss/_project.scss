@@ -1,0 +1,154 @@
+@import "./mixins";
+//========================================================================================
+.page 
+{
+    .content
+    {
+    .projects_all
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(350px, 1fr));
+    margin-left: 20px;
+    gap: 20px;
+    .project
+    {
+        height: 350px;
+        background-color: #fff;
+        padding: $p;
+        border-radius: $bor_rad;
+        text-transform: capitalize;
+        position: relative;
+        .contentProject
+        {
+            h2
+            {
+                font-size: $fontSize + 4px;
+            }
+            p 
+            {
+                font-size: $fontSize  - 1px;
+            }
+        }
+        .project_price
+        {
+            position: absolute;
+            bottom: 10px;
+            right:15px;
+            font-size: $fontSize;
+        }
+        .project_time
+        {
+            position: absolute;
+            top: 10px;
+            right:15px;
+            font-size: $fontSize - 1px;
+
+        }
+        .porject_progress
+        {
+            position: absolute;
+            bottom: 30px;
+            left:20px;
+                width: 120px;
+                background-color: $back_div;
+                display: block;
+                height: 8px;
+                border-radius: 10px;
+                background-color: rgba($blue, 0.4);
+                &::after {
+                  content: "";
+                  position: absolute;
+                  left: 0px;
+                  top: 0px;
+                  width: 55%;
+                  border-radius: 10px;
+                  height: 100%;
+                  background-color: $blue;
+                }
+              
+        }
+        .project_imgs
+        {
+              position: relative;
+              display: block;
+              margin-top: 20px;
+              img 
+              {
+                width:40px;
+                height: 40px;
+                border-radius: 50%;
+                position: absolute;
+                top:20px;
+                left: 0px;
+              }
+              img:nth-child(2)
+              {
+                left: 25px;
+              }
+              img:nth-child(3)
+              {
+                left: 45px;
+              }
+              img:nth-child(4)
+              {
+                left: 65px;
+              }
+        }
+        .project_info
+    {
+        border-bottom: 1px solid #ddd;
+        border-top: 1px solid #ddd;
+        display: flex;
+        justify-content: flex-end;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        width: 100%;
+        height: fit-content;
+        margin-top: 100px;
+        .info 
+        {
+            padding: 10px;
+            font-size: $fontSize;
+            margin-right: 15px;
+            background-color: $back_div;
+            text-transform: capitalize;
+            border-radius: $bor_rad;
+        }
+    }
+    }
+    // .pro2
+    // {
+    //     height: 350px;
+    // }
+}
+}
+}
+//========================================================================================
+@media (max-width:992px)
+{
+    .projects_all
+{
+    grid-template-columns: repeat(1 minmax(300px, 1fr));
+    grid-template-rows: repeat(1, minmax(420px, 1fr));
+    margin-left: 0px;
+    margin: auto;
+    .project
+    {
+        .project_price
+        {
+            position: absolute;
+            bottom: 0px;
+            right:25px;
+        }
+        .project_time
+        {
+            position: absolute;
+            top: 5px;
+            right:25px;
+        }
+    }
+}
+}
+//========================================================================================
+@import "./Media";

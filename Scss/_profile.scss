@@ -1,0 +1,321 @@
+@import "./mixins";
+//========================================================================================
+.page {
+ 
+.profile
+{
+// --------------------------------------------------------   
+display: grid;
+grid-template-columns: repeat(2, minmax(400px, 1fr));
+grid-template-rows: repeat(2, minmax(400px, 1fr));
+margin-left: 20px;
+gap: 20px;
+> div 
+{
+    background-color: #fff;
+    padding: $p;
+    border-radius: $bor_rad;
+    text-transform: capitalize;
+}
+.Profile_img
+{
+    grid-column: span 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    .profileImage
+    {
+        text-align: center;
+        width:25%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-right: 1px solid #ddd;
+img 
+{
+    width: 120px;
+}
+h4 
+{
+    margin-bottom: 15px;
+    margin-top: 15px;
+      font-size: $fontSize +4px;
+}
+p:first-of-type
+{
+   font-size: $fontSize +3px;
+   margin-bottom: 14px;
+}
+span:first-of-type 
+{
+    width: 160px;
+    height: 6px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ddd;
+    border-radius: $bor_rad;
+    display: block;
+    position: relative;
+    &::after 
+    {
+        position: absolute;
+        content: "";
+        background-color: $blue;
+        width: 70%;
+        height: 100%;
+        left: 0px;
+        top: 0px;
+        border-radius: inherit;
+    }
+}
+.ProfileIcon
+{
+    i.fa-star
+    {
+        color: $orange
+    }
+    display: inline-block;
+    margin-bottom: 10px;
+}
+    }
+    .ProfileContent
+    {
+flex: 2;
+height: 100%;
+.ProfileContent_info
+{
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    h4 
+    {
+        color: #000;
+        font-weight: 500;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        span 
+        {
+            color: rgb(151, 150, 150);
+        }
+    }
+    .co_profile
+    {
+        color: rgb(151, 150, 150);
+        padding-left :20px;
+    }
+    .flex_infoProfile
+    {
+        display:flex;
+        justify-content: space-between;
+        align-content: center;
+        > h4:first-child
+        {
+            padding-left :20px;
+        }
+    }
+}
+.ProfileContent_info:last-child
+{
+    border: none;
+}
+    }
+}
+.profile_skills
+{
+    
+    .infoProfile
+    {
+        border-bottom: 1px solid #ddd;
+        display: flex;
+        width: 100%;
+        justify-content: flex-start;
+        align-items: center;
+        padding-bottom: 10px;
+        padding-top: 15px;
+        flex-direction: row;
+        .info 
+        {
+            padding: 10px  20px;
+            font-size: $fontSize;
+            margin-right: 15px;
+            background-color: $back_div;
+            text-transform: capitalize;
+            border-radius: $bor_rad;
+
+        }
+    }
+    .infoProfile:last-child
+    {
+        border:none;
+    }
+}
+.last_activities
+{
+.activiesProfile
+{
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+  text-transform: capitalize;
+  h4
+  {
+      margin-bottom: 7px;
+  }
+  p 
+  {
+      font-size: $fontSize - 1px;
+  }
+    .infoActiPro
+    {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 15px;
+        img 
+        {
+            width:40px;
+            margin-top: 10px;
+        }
+    }
+    // .timeProfile
+    // {
+
+    // }
+}
+}
+// --------------------------------------------------------    
+}
+}
+//========================================================================================
+@media (max-width:992px)
+{
+    .page 
+    {
+        .profile
+{
+// --------------------------------------------------------   
+grid-template-columns:  minmax(350px, 1fr);
+grid-template-rows: minmax(350px, 1fr);
+margin-left: 10px;
+.Profile_img
+{
+    grid-column: span 1;
+    justify-content: flex-start;
+    flex-direction: column !important;
+    flex-wrap: wrap !important;
+    .profileImage
+    {
+        width:100%;
+        height: fit-content;
+
+        border-right: none;
+        span:first-of-type 
+{
+    width: 160px;
+    height: 6px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ddd;
+    border-radius: $bor_rad;
+    display: block;
+    position: relative;
+    &::after 
+    {
+        position: absolute;
+        content: "";
+        background-color: $blue;
+        width: 70%;
+        height: 100%;
+        left: 0px;
+        top: 0px;
+        border-radius: inherit;
+    }
+}
+img 
+{
+    width: 80px;
+}
+h4 
+{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+p:first-of-type
+{
+   margin-bottom: 10px;
+}
+    }
+    .ProfileContent
+    {
+flex: 1;
+margin-top: 30px;
+height: 100% !important; 
+width: 100%;
+.ProfileContent_info
+{
+    
+    h4 
+    {
+        color: #000;
+        font-weight: 500;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        span 
+        {
+            color: rgb(151, 150, 150);
+        }
+    }
+    .co_profile
+    {
+        color: rgb(151, 150, 150);
+        padding-left :0px;
+    }
+    .flex_infoProfile
+    {
+        flex-direction: column;
+        width: 100%;
+        > h4:first-child
+        {
+            padding-left :0px;
+        }
+    }
+}
+    }
+}
+.activiesProfile
+{
+    justify-content: flex-start;
+    flex-direction: column;
+    padding-bottom: 5px !important;
+    h4 
+    {
+        font-size: $fontSize + 4px;
+        margin: 0px;
+    }
+    .infoActiPro
+    {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align:center;
+        gap: 0px;
+        img 
+        {
+            width:50px !important;
+        }
+    }
+}
+
+    }
+}
+}
+@import "./Media";

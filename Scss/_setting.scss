@@ -1,0 +1,450 @@
+@import "./mixins";
+//========================================================================================
+.page 
+{
+    .content
+    {
+        .setting_all
+        {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            grid-template-rows: repeat(auto-fill, minmax(1fr));
+            margin-left: 20px;
+            gap: 20px;
+            .setting
+            {
+                background-color: #fff;
+                text-transform: capitalize;
+                position: relative;
+                border-radius: $bor_rad;
+                padding: $p;            
+                .content_sett 
+                {
+                    text-transform: capitalize;
+                    width:fit-content;
+                    h2 
+                    {
+                        font-size: 1.3em;
+                    }
+                    p 
+                    {
+                        font-size:.9em;
+                    }
+                }   
+            }
+            // ===========================
+            .site_control
+            {
+                .check
+                {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    > div 
+                    {
+                        h4 
+                        {
+                            font-size: 1em;
+                            margin-bottom: 8px;
+                        }
+                        p 
+                        {
+                            font-size: .8em;
+                        }
+                    }
+                    span 
+                    {
+                        width: 70px;
+                        height: 30px;
+                        border-radius: 30px;
+                        background-color: $bluesec;
+                        position: relative;
+                  
+                        i 
+                        {
+                            position: absolute;
+                            right: 5px;
+                            top:4px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            color:$bluesec;
+                            font-size:.8em;
+                            background-color: #fff;
+                            width: 20px;
+                            height: 20px;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+                textarea {
+                    background-color: $back_div;
+                    margin-bottom: 20px;
+                    margin-top: 40px;
+                    font-size: .9em;
+                    padding: $p;
+                    border-radius: $bor_rad;
+                    border: none;
+                    width: 60%;
+                    &:focus {
+                      width: 100%;
+                      @include trans;
+                    }
+            
+                    &:focus::placeholder {
+                      opacity: 0;
+                    }
+                  }
+            }
+            // ===========================
+            .general_infor
+            {
+                position: relative;
+                span 
+                {
+                    background-color:$bluesec;
+                    padding: 10px;
+                    margin-left: 5px;
+                    margin-top: 30px;
+                    border-radius:$bor_rad;
+                    font-size: .8em;
+                    color:#fff;
+                    cursor: pointer;
+                }
+                form 
+                {
+                    margin-top: 25px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    label 
+                    {
+                        text-transform: capitalize;
+                        margin-left: 5px;
+                        font-weight:600;
+                        font-size: .9em !important;
+                        color:rgb(100, 99, 99);
+                    }
+                    input[type="text"] {
+                        max-width: 100%;
+                        margin-top: 10px;
+                        width: 50%;
+                        margin-bottom: 20px;
+                        background-color: $back_div;
+                        padding: $p;
+                        border-radius: $bor_rad;
+                        height: 30px;
+                        border: none;
+                        @include trans;
+                        &:focus {
+                          width: 100%;
+                          @include trans;
+                        }
+                
+                        &:focus::placeholder {
+                          opacity: 0;
+                        }
+                      }
+                }
+            }
+            // ===========================
+            .security_info
+            {
+                .Sec_change,.Sec_check,.Sec_device 
+                {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding-bottom: 10px;
+                    border-bottom: 1px solid #ddd;
+                   
+                    > div 
+                    {
+                        h4 
+                        {
+                            font-size: 1em;
+                            margin-bottom: 8px;
+                        }
+                        p 
+                        {
+                            font-size: .8em;
+                        }
+                    }
+                }
+                .Sec_change
+                {
+                    span 
+                    {
+                        background-color:$bluesec;
+                        padding: 10px;
+                        margin-left: 5px;
+                        margin-top: 30px;
+                        border-radius:$bor_rad;
+                        font-size: .8em;
+                        color:#fff;
+                        cursor: pointer;
+                    }
+                }
+               .Sec_check
+                {
+                   
+                    span 
+                    {
+                        width: 70px;
+                        height: 30px;
+                        border-radius: 30px;
+                        background-color: $bluesec;
+                        position: relative;
+                        margin-right: 10px;
+                        i 
+                        {
+                            position: absolute;
+                            right: 5px;
+                            top:4px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            color:$bluesec;
+                            font-size:.8em;
+                            background-color: #fff;
+                            width: 20px;
+                            height: 20px;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+                .Sec_device
+                {
+                    span 
+                    {
+                        background-color: #f3f6f9;
+                        padding: 10px;
+                    }
+                }
+            }
+            // ===========================
+            .social_info
+            {
+                .soaciallalasa
+                {
+display: flex;
+height: 300px;
+flex-direction: column;
+gap: 50px;
+.social
+                {
+                    position: relative;
+                    width: 100%;
+                    margin-bottom: 15px;
+                    i 
+                    {
+                        position: absolute;
+                        top: 10px;
+                        left: 0;
+                        background-color: $back_div;
+                        width: 40px;
+                        border-radius: $bor_rad;
+                        height: 43px;
+                        border: 1px solid lightgray;      
+                        border-right: 1px solid lightgray;
+                        border-top-right-radius: 0px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: gray;
+                        border-bottom-right-radius: 0px;
+                    }
+                    input {
+                        margin-top: 10px;
+                        margin-left: 0px;
+                        position: absolute;
+                        top: 0px;
+                        left: 40px;
+                        width: 60%;
+                        margin-bottom: 20px;
+                        background-color: $back_div;
+                        padding: $p;
+                        padding-left: 10px;
+                        font-size: .9em;
+                        border-radius: $bor_rad;
+                        height: 30px;
+                        border: 1px solid lightgray;     
+                        border-left: 1px solid $back_div;
+                        border-top-left-radius: 0px;
+                        border-bottom-left-radius: 0px;            
+                      }
+                    
+                }
+                }
+                
+            }
+            // ===========================
+            .widgets_control
+            {
+                .widg
+                {
+                    margin-top: 20px;
+                    display: flex;
+                    justify-content: flex-start;
+                    border-bottom: 1px solid #ddd;
+                    align-items: center;
+                    i 
+                    {
+                        background-color: $bluesec;
+                        color: #fff;
+                        border-radius: 5px;
+                        border: 1px solid $bluesec;
+                        width: 25px;
+                        height: 25px;
+                        font-size: .8em;
+                        display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-right: 10px;
+                    margin-bottom: 10px;
+                    }
+                    p 
+                    {
+                        color: #000;
+                        font-size: 1.2em;
+                    }
+                }
+                .widg:nth-child(5)
+                {
+                    i 
+                    {
+                        background-color: #fff;
+                        border: 2px solid #ddd;
+                        color: #fff;
+                    }
+                }
+            }
+            // ===========================
+            .backup_manger
+            {
+                .backupaall
+                {
+                    margin-top: 20px;
+                    border-bottom: 1px solid #ddd;
+                    padding-bottom: 20px;
+                    .backup
+                    {
+                        margin-top: 5px;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        i 
+                        {
+                            background-color: #fff;
+                            color: $bluesec;
+                            border-radius: 50%;
+                            border: 2px solid $bluesec;
+                            width: 25px;
+                            height: 25px;
+                            font-size: 1em;
+                            display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-right: 10px;
+                        margin-bottom: 10px;
+                        }
+                        p 
+                        {
+                            color: #000;
+                            font-size: 1.1em;
+                        }
+                    }
+                    .backup:nth-child(2),.backup:nth-child(3)
+                    {
+                        i 
+                        {
+                            background-color: #fff;
+                            border: 2px solid gray;
+                            color: #fff;
+                        }
+                    }
+                }
+                .zeroall
+                {
+                    margin-top: 30px;
+                    width: 100%;
+                    display: grid;
+                    grid-template-columns: repeat(3,1fr);
+                    grid-template-rows: repeat(auto-fill,1fr);
+                    gap: 10px;
+                    .zero 
+                    {
+                        padding:$p;
+                        border: 2px solid #ddd;
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-content: center;
+                        align-items: center;
+                        border-radius: $bor_rad;
+                        flex-direction: column;
+                        i 
+                        {
+                            font-size: 1em;
+                        }
+                        h5 
+                        {
+                            font-size: 1em;
+                            margin-top: 15px;
+                            margin-bottom: 5px;
+                        }
+                    }
+                    .zero:nth-child(2)
+                    {
+                        border: 2px solid $blue;
+                        color: $blue;
+                    }
+                }
+              
+            }
+            // ===========================
+
+            }
+        }
+    }
+                //========================================================================================
+@media (max-width:992px)
+{
+    .page 
+{
+    .content
+    {
+    .setting_all
+{
+    grid-template-columns: repeat(1 minmax(300px, 1fr));
+    grid-template-rows: repeat(1, minmax(300px, 1fr));
+    .setting 
+    {
+        .content 
+        {
+            text-align: center;
+        }
+    }
+    }
+}
+}
+}
+//========================================================================================
+@media (max-width:767px)
+{
+    .page 
+{
+    .content
+    {
+    .setting_all
+{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    margin-left: 10px;
+    }
+}
+}
+}
+// grid-template-columns: 1fr;
+//========================================================================================
+//========================================================================================
+@import "./Media";
